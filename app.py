@@ -4,7 +4,7 @@ import time
 import os
 from datetime import datetime
 from twilio.rest import Client
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 # Settings:
