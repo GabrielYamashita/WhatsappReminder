@@ -3,21 +3,21 @@
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "10:36",
+         "horario": "15:30",
          "message": "mensagem 1",
          "comment_": "EXEMPLO: mensagem 1 todos os dias às 16h30"
       },
       {
          "dia_mes": null,
          "dias_num": [1,3],
-         "horario": "10:37",
+         "horario": "15:35",
          "message": "mensagem 2",
          "comment_": "EXEMPLO: mensagem 2 de seg e qua às 16h30"
       },      
       {
          "dia_mes": null,
          "dias_num": [3],
-         "horario": "10:38",  
+         "horario": "15:31",  
          "message": "mensagem 3",
          "comment_": "EXEMPLO: mensagem 3 de qua às 16h30"
       },
