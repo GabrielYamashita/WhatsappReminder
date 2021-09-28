@@ -2,21 +2,24 @@
 import json
 import time
 import os
-from datetime import datetime
+import datetime
+import datetime
+from pytz import timezone
 from twilio.rest import Client
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 
 # Settings:
-#load_dotenv()
-account_sid = os.environ.get('ACCOUNT_SID')
-auth_token = os.environ.get('AUTH_TOKEN')
+load_dotenv()
+account_sid = os.getenv('ACCOUNT_SID')
+auth_token = os.getenv('AUTH_TOKEN')
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
 # Funções:
 def check(diaSemana, tempo, data): # checa os parâmetros da hora atual, e depois manda o lembrete
     for info in data['YABOT']:
+        dia_mes = info['dia_mes']
         date = info['dias_num']
         schedule = info['horario']
         message = info['message']
@@ -33,7 +36,7 @@ def manda_mensagem(mensagem, tempo): # função para mandar mensagem
                                      from_=from_whatsapp_number,
                                      to=to_whatsapp_number)
 
-    print(f'SID: {message.sid}')
+    print(f'SID: {message.sid}, \nTIME: {tempo}')
 
 def add_json():
     # if msg.lower() in ["add"]:
@@ -44,11 +47,13 @@ def add_json():
 # Main():
 def main():
     # Tempo:
-    now = datetime.now()
+    utc = datetime.datetime.now(datetime.timezone.utc)
+    BRSP = timezone('America/Sao_Paulo')
+    now = utc.astimezone(BRSP)
+
     # segundo = now.second
 
-    # if segundo == 0:
-        # Load Data:
+    # Load Data:
     with open('messages.json') as f:
         data = json.load(f)
 
@@ -57,11 +62,10 @@ def main():
     tempo = now.strftime('%H:%M')
     
     # Função:
-    # print(f"Horário: {tempo}")
-    # print(f"Dia: {diaSemana}")
-    # print("")
+    print(f"TIME: {tempo}")
     check(diaSemana, tempo, data)
-    # print("")
+    print("")
 
     # Espera 1 segundo:
     time.sleep(1)
+
