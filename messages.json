@@ -9,7 +9,7 @@
       {
          "dia_mes": null,
          "dias_num": [1,3],
-         "horario": "23:34",
+         "horario": "23:36",
          "message": "VC EH MT"
       },      
       {
@@ -20,8 +20,8 @@
       },
       {
          "dia_mes": null,
-         "dias_num": [2],
-         "horario": "22:40",
+         "dias_num": [0],
+         "horario": "23:37",
          "message": "mensagem teste 2"
       },
       {
