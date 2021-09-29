@@ -8,8 +8,8 @@ from twilio.rest import Client
 
 
 # Settings:
-account_sid = os.environ('ACCOUNT_SID')
-auth_token = os.environ('AUTH_TOKEN')
+account_sid = os.environ.get('ACCOUNT_SID')
+auth_token = os.environ.get('AUTH_TOKEN')
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
