@@ -5,11 +5,16 @@ import os
 import datetime
 from pytz import timezone
 from twilio.rest import Client
+from dotenv import load_dotenv
 
 
 # Settings:
 account_sid = os.environ.get('ACCOUNT_SID')
 auth_token = os.environ.get('AUTH_TOKEN')
+
+# load_dotenv()
+# account_sid = os.getenv('ACCOUNT_SID')
+# auth_token = os.getenv('AUTH_TOKEN')
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
@@ -55,7 +60,7 @@ def main():
             data = json.load(f)
 
         # Variáveis:
-        diaSemana = datetime.datetime.today().isoweekday()
+        diaSemana = now.isoweekday()
         tempo = now.strftime('%H:%M')
         
         # Função:
