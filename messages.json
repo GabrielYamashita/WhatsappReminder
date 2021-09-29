@@ -26,6 +26,18 @@
       },
       {
          "dia_mes": null,
+         "dias_num": [3],
+         "horario": "08:00",
+         "message": "Bom dia! (somente de quarta)"
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [3],
+         "horario": "15:30",  
+         "message": "A aula de *Eletromag* acabou!"
+      },
+      {
+         "dia_mes": null,
          "dias_num": [5],
          "horario": "14:00",  
          "message": "essa mensagem não vai ser mandada"
@@ -35,12 +47,6 @@
          "dias_num": [6],
          "horario": "16:00",  
          "message": "essa mensagem não vai ser mandada"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [3],
-         "horario": "08:00",
-         "message": "Bom dia! (somente de quarta)"
       }
    ]
 }

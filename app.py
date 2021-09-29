@@ -1,7 +1,7 @@
 ## Imports:
+import os
 import json
 import time
-import os
 import datetime
 from pytz import timezone
 from twilio.rest import Client
