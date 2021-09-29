@@ -6,13 +6,13 @@ import datetime
 import datetime
 from pytz import timezone
 from twilio.rest import Client
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 # Settings:
-load_dotenv()
-account_sid = os.getenv('ACCOUNT_SID')
-auth_token = os.getenv('AUTH_TOKEN')
+# load_dotenv()
+account_sid = os.environ('ACCOUNT_SID')
+auth_token = os.environ('AUTH_TOKEN')
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
@@ -47,9 +47,10 @@ def add_json():
 # Main():
 def main():
     # Tempo:
-    utc = datetime.datetime.now(datetime.timezone.utc)
-    BRSP = timezone('America/Sao_Paulo')
-    now = utc.astimezone(BRSP)
+    now = datetime.datetime.now()
+    # utc = datetime.datetime.now(datetime.timezone.utc)
+    # BRSP = timezone('America/Sao_Paulo')
+    # now = utc.astimezone(BRSP)
 
     # segundo = now.second
 
