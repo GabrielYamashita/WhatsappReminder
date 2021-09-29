@@ -3,38 +3,44 @@
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "23:29",
-         "message": "mensagem teste 1"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [1,3],
-         "horario": "23:36",
-         "message": "VC EH MT"
-      },      
-      {
-         "dia_mes": null,
-         "dias_num": [1,3],
-         "horario": "21:33",  
-         "message": "mensagem teste 3 que n deveria ir"
+         "horario": "09:30",
+         "message": "Bom dia (todos os dias)"
       },
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "23:37",
-         "message": "mensagem teste 2"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [2,4,5,6,7],
-         "horario": "21:35",
-         "message": "mensagem 5"
+         "horario": "17:00",
+         "message": "Feche a janela!"
       },
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "21:36",
-         "message": "mensagem final"
+         "horario": "23:00",
+         "message": "Boa noite, hora de dormir!"
+      }, 
+      {
+         "dia_mes": null,
+         "dias_num": [2],
+         "horario": "12:00",  
+         "message": "essa mensagem não vai ser mandada"
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [5],
+         "horario": "14:00",  
+         "message": "essa mensagem não vai ser mandada"
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [6],
+         "horario": "16:00",  
+         "message": "essa mensagem não vai ser mandada"
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [3],
+         "horario": "08:00",
+         "message": "Bom dia! (somente de quarta)"
       }
    ]
 }
