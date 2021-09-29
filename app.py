@@ -57,7 +57,7 @@ def main():
         with open('messages.json') as f:
             data = json.load(f) # armazenando na variável data
 
-        # Variáveis:
+        # Variáveis: 
         diaSemana = now.isoweekday() # dia da semana atual
         tempo = now.strftime('%H:%M') # horário atual
         
