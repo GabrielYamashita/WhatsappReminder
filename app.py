@@ -2,16 +2,14 @@
 import json
 import time
 import os
-from datetime import datetime
+import datetime
 from pytz import timezone
 from twilio.rest import Client
-from dotenv import load_dotenv
 
 
 # Settings:
-load_dotenv()
-account_sid = os.getenv('ACCOUNT_SID')
-auth_token = os.getenv('AUTH_TOKEN')
+account_sid = os.environ('ACCOUNT_SID')
+auth_token = os.environ('AUTH_TOKEN')
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
@@ -34,7 +32,6 @@ def manda_mensagem(mensagem, tempo): # função para mandar mensagem
     message = client.messages.create(body=mensagem,
                                      from_=from_whatsapp_number,
                                      to=to_whatsapp_number)
-
     print(f'SID: {message.sid}, \nTIME: {tempo}')
 
 def add_json():
@@ -46,27 +43,26 @@ def add_json():
 # Main():
 def main():
     # Tempo:
-    now = datetime.now()
-    # utc = datetime.datetime.now(datetime.timezone.utc)
-    # BRSP = timezone('America/Sao_Paulo')
-    # now = utc.astimezone(BRSP)
+    utc = datetime.datetime.now(datetime.timezone.utc)
+    BRSP = timezone('America/Sao_Paulo')
+    now = utc.astimezone(BRSP)
 
-    # segundo = now.second
+    segundo = now.second
 
-    # if segundo == 0:
-    # Load Data:
-    with open('messages.json') as f:
-        data = json.load(f)
+    if segundo == 0:
+        # Load Data:
+        with open('messages.json') as f:
+            data = json.load(f)
 
-    # Variáveis:
-    diaSemana = datetime.today().isoweekday()
-    tempo = now.strftime('%H:%M')
-    
-    # Função:
-    print(f"TIME: {tempo}")
-    check(diaSemana, tempo, data)
-    print("")
+        # Variáveis:
+        diaSemana = datetime.datetime.today().isoweekday()
+        tempo = now.strftime('%H:%M')
+        
+        # Função:
+        print(f"TIME: {tempo}")
+        check(diaSemana, tempo, data)
+        print("")
 
-    # Espera 1 segundo:
-    time.sleep(1)
+        # Espera 1 segundo:
+        time.sleep(1)
 
