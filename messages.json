@@ -4,7 +4,7 @@
          "dia_mes": null,
          "dias_num": [0],
          "horario": "09:30",
-         "message": "Bom dia (todos os dias)"
+         "message": "Bom dia, Yama!"
       },
       {
          "dia_mes": null,
@@ -15,38 +15,8 @@
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "23:00",
+         "horario": "23:30",
          "message": "Boa noite, hora de dormir!"
-      }, 
-      {
-         "dia_mes": null,
-         "dias_num": [2],
-         "horario": "12:00",  
-         "message": "essa mensagem não vai ser mandada"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [3],
-         "horario": "08:00",
-         "message": "Bom dia! (somente de quarta)"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [3],
-         "horario": "15:30",  
-         "message": "A aula de *Eletromag* acabou!"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [5],
-         "horario": "14:00",  
-         "message": "essa mensagem não vai ser mandada"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [6],
-         "horario": "16:00",  
-         "message": "essa mensagem não vai ser mandada"
       }
    ]
 }
