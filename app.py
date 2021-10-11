@@ -15,6 +15,8 @@ auth_token = os.environ.get('AUTH_TOKEN') # auth token para o heroku
 # load_dotenv() # carrega as variáveis de ambiente
 # account_sid = os.getenv('ACCOUNT_SID') # account sid para rodar localmente
 # auth_token = os.getenv('AUTH_TOKEN') # auth token para rodar localmente
+
+# Client:
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
@@ -44,7 +46,7 @@ def add_json():
     pass
 
 
-## Main():
+## Main:
 def main():
     ## Tempo:
     utc = datetime.datetime.now(datetime.timezone.utc) # setando o tempo para UTC
@@ -67,4 +69,3 @@ def main():
 
         # Espera 1 segundo:
         time.sleep(1)
-
