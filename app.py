@@ -21,17 +21,24 @@ client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
 ## Funções:
-def check(diaSemana, tempo, data): # checa os parâmetros da hora atual, e depois manda o lembrete
+def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e depois manda o lembrete
     for info in data['YABOT']: # checa cada info de data
         dia_mes = info['dia_mes'] # recebe o dia do mês
         date = info['dias_num'] # recebe o dia da semana
         schedule = info['horario'] # recebe o horário
         message = info['message'] # recebe a mensagem
         
-        for i in date:
-            if i == diaSemana or i == 0: # checa o dia da semana
-                if tempo == schedule: # checa o horário atual
-                    manda_mensagem(message, tempo)
+        if dia_mes == None:
+            for i in date:
+                if i == diaSemana or i == 0: # checa o dia da semana
+                    if tempo == schedule: # checa o horário atual
+                        manda_mensagem(message, tempo)
+
+        else:
+            for i in dia_mes:
+                if i == dia:
+                    if tempo == schedule:
+                        manda_mensagem(message, tempo)
 
 def manda_mensagem(mensagem, tempo): # função para mandar a mensagem
     from_whatsapp_number = 'whatsapp:+14155238886'
@@ -59,13 +66,14 @@ def main():
         with open('messages.json') as f:
             data = json.load(f) # armazenando na variável data
 
-        # Variáveis: 
+        # Variáveis:
+        dia = now.day # dia atual do mês
         diaSemana = now.isoweekday() # dia da semana atual
         tempo = now.strftime('%H:%M') # horário atual
         
         # Função:
         print(f"TIME: {tempo}")
-        check(diaSemana, tempo, data)
+        check(diaSemana, tempo, data, dia)
 
         # Espera 1 segundo:
         time.sleep(1)

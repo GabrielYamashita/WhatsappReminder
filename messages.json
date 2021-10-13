@@ -9,12 +9,6 @@
       {
          "dia_mes": null,
          "dias_num": [0],
-         "horario": "17:00",
-         "message": "Feche a janela!"
-      },
-      {
-         "dia_mes": null,
-         "dias_num": [0],
          "horario": "20:30",
          "message": "Remédio Mãe."
       },
@@ -23,6 +17,18 @@
          "dias_num": [0],
          "horario": "23:30",
          "message": "Boa noite, hora de dormir!"
+      },
+      {
+         "dia_mes": [20],
+         "dias_num": [0],
+         "horario": "16:00",
+         "message": "Imprimir Boleto!"
+      },
+      {
+         "dia_mes": [20],
+         "dias_num": [0],
+         "horario": "20:00",
+         "message": "Imprimir Boleto!"
       }
    ]
 }
