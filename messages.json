@@ -6,17 +6,24 @@
          "horario": "09:30",
          "message": "Bom dia, Yama!"
       },
-      {
-         "dia_mes": null,
-         "dias_num": [0],
-         "horario": "17:00",
-         "message": "Feche a Janela!"
-      },
+      
       {
          "dia_mes": null,
          "dias_num": [0],
          "horario": "20:30",
          "message": "Remédio Mãe."
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [0],
+         "horario": "22:00",
+         "message": "Manda Mensagem!"
+      },
+      {
+         "dia_mes": null,
+         "dias_num": [0],
+         "horario": "22:01",
+         "message": "join lift-lesson"
       },
       {
          "dia_mes": null,
@@ -27,7 +34,7 @@
       {
          "dia_mes": [20],
          "dias_num": [0],
-         "horario": "16:00",
+         "horario": "15:00",
          "message": "Imprimir Boleto!"
       },
       {
