@@ -6,7 +6,12 @@
          "horario": "09:30",
          "message": "Bom dia, Yama!"
       },
-      
+      {
+         "dia_mes": null,
+         "dias_num": [0],
+         "horario": "15:30",
+         "message": "Boa Tarde, Yama!"
+      },
       {
          "dia_mes": null,
          "dias_num": [0],
