@@ -1,4 +1,5 @@
 ## Imports:
+from email.encoders import encode_noop
 import os
 import json
 import time
@@ -31,7 +32,7 @@ def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e 
         if dia_mes == None:
             for i in date:
                 if i == diaSemana or i == 0: # checa o dia da semana
-                    if tempo == schedule: # checa o horário atual
+                    if tempo == schedule: # checa o hor-ário atual
                         manda_mensagem(message, tempo)
 
         else:
@@ -40,7 +41,8 @@ def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e 
                     if tempo == schedule:
                         manda_mensagem(message, tempo)
 
-def manda_mensagem(mensagem, tempo): # função para mandar a mensagem
+
+def manda_mensagem(mensagem): # função para mandar a mensagem
     from_whatsapp_number = 'whatsapp:+14155238886'
     to_whatsapp_number = 'whatsapp:+5511991982436'
 
@@ -49,9 +51,9 @@ def manda_mensagem(mensagem, tempo): # função para mandar a mensagem
                                      to=to_whatsapp_number)
     # print(f'SID: {message.sid}, \nTIME: {tempo}')
 
+
 def add_json():
     pass
-
 
 
 ## Main:
@@ -64,7 +66,7 @@ def main():
 
     if segundo == 0:
         # Carregando o JSON:
-        with open('messages.json') as f:
+        with open('messages.json', encoding='utf-8') as f:
             data = json.load(f) # armazenando na variável data
 
         # Variáveis:
