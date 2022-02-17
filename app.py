@@ -8,6 +8,7 @@ from twilio.rest import Client
 from dotenv import load_dotenv
 
 
+
 ## Settings:
 account_sid = os.environ.get('ACCOUNT_SID') # account sid para o heroku
 auth_token = os.environ.get('AUTH_TOKEN') # auth token para o heroku
@@ -16,28 +17,29 @@ auth_token = os.environ.get('AUTH_TOKEN') # auth token para o heroku
 # account_sid = os.getenv('ACCOUNT_SID') # account sid para rodar localmente
 # auth_token = os.getenv('AUTH_TOKEN') # auth token para rodar localmente
 
+
 # Client:
 client = Client(account_sid, auth_token) # inicializa cliente do Twilio
 
 
 ## Funções:
 def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e depois manda o lembrete
-    for info in data['YABOT']: # checa cada info de data
-        dia_mes = info['dia_mes'] # recebe o dia do mês
-        date = info['dias_num'] # recebe o dia da semana
-        schedule = info['horario'] # recebe o horário
-        message = info['message'] # recebe a mensagem
+    for info in data['YABOT']:      # checa cada info de data
+        dia_mes = info['dia_mes']   # recebe o dia do mês
+        date = info['dias_num']     # recebe o dia da semana
+        schedule = info['horario']  # recebe o horário
+        message = info['message']   # recebe a mensagem
         
-        if dia_mes == None:
+        if dia_mes == None: # checa se o input é no dia da semana
             for i in date:
                 if i == diaSemana or i == 0: # checa o dia da semana
                     if tempo == schedule: # checa o horário atual
                         manda_mensagem(message)
 
-        else:
+        else: # checa se o input é no dia do mês
             for i in dia_mes:
-                if i == dia:
-                    if tempo == schedule:
+                if i == dia: # checa o dia do mês
+                    if tempo == schedule: # checa o horário atual
                         manda_mensagem(message)
 
 
@@ -48,7 +50,6 @@ def manda_mensagem(mensagem): # função para mandar a mensagem
     message = client.messages.create(body=mensagem,
                                      from_=from_whatsapp_number,
                                      to=to_whatsapp_number)
-    # print(f'SID: {message.sid}, \nTIME: {tempo}')
 
 
 def add_json():
@@ -74,7 +75,7 @@ def main():
         tempo = now.strftime('%H:%M') # horário atual
         
         # Função:
-        print(f"TIME: {tempo}")
+        # print(f"TIME: {tempo}") # usar para teste
         check(diaSemana, tempo, data, dia)
 
         # Espera 1 segundo:
