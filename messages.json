@@ -10,13 +10,6 @@
       {
          "dia_mes": null, 
          "dias_num": [0], 
-         "horario": "15:15", 
-         "message": "Oi bilbia"
-      },
-
-      {
-         "dia_mes": null, 
-         "dias_num": [0], 
          "horario": "17:00", 
          "message": "Fechar a Janela!"
       },
