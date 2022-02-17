@@ -31,14 +31,14 @@ def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e 
         if dia_mes == None:
             for i in date:
                 if i == diaSemana or i == 0: # checa o dia da semana
-                    if tempo == schedule: # checa o hor-ário atual
-                        manda_mensagem(message, tempo)
+                    if tempo == schedule: # checa o horário atual
+                        manda_mensagem(message)
 
         else:
             for i in dia_mes:
                 if i == dia:
                     if tempo == schedule:
-                        manda_mensagem(message, tempo)
+                        manda_mensagem(message)
 
 
 def manda_mensagem(mensagem): # função para mandar a mensagem
