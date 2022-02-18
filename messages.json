@@ -10,13 +10,6 @@
       {
          "dia_mes": null, 
          "dias_num": [0], 
-         "horario": "13:13", 
-         "message": "Oi math seu lindo!"
-      },
-
-      {
-         "dia_mes": null, 
-         "dias_num": [0], 
          "horario": "17:00", 
          "message": "Fechar a Janela!"
       },
