@@ -52,10 +52,6 @@ def manda_mensagem(mensagem): # função para mandar a mensagem
                                      to=to_whatsapp_number)
 
 
-def add_json():
-    pass
-
-
 ## Main:
 def main():
     ## Tempo:
