@@ -68,6 +68,13 @@
          "dias_num": [2, 4],
          "horario": "18:50",
          "message": "Treino de Natação!"
+      },
+
+      {
+         "dia_mes": null,
+         "dias_num": [0],
+         "horario": "23:57",
+         "message": "Teste"
       }
    ]     
 }
