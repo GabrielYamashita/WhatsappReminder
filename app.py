@@ -43,6 +43,14 @@ def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e 
                         manda_mensagem(message)
 
 
+def deploy_check(): # função para mandar a mensagem
+    from_whatsapp_number = 'whatsapp:+14155238886'
+    to_whatsapp_number = 'whatsapp:+5511991982436'
+
+    message = client.messages.create(body='New Deploy Has Been Launched.',
+                                     from_=from_whatsapp_number,
+                                     to=to_whatsapp_number)
+
 def manda_mensagem(mensagem): # função para mandar a mensagem
     from_whatsapp_number = 'whatsapp:+14155238886'
     to_whatsapp_number = 'whatsapp:+5511991982436'
