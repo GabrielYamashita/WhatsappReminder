@@ -8,6 +8,6 @@ sched = BlockingScheduler()
 print("Running...")
 manda_mensagem('New Deploy has Been Launched.')
 
-# Marcando rodar a função a cada segundo
+# Colocando para Rodar a Função main a Cada 1s
 sched.add_job(main, 'interval', seconds=1)
 sched.start()
