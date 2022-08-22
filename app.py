@@ -30,7 +30,7 @@ def check(diaSemana, tempo, data, dia): # checa os parâmetros da hora atual, e 
         schedule = info['horario']  # recebe o horário
         message = info['message']   # recebe a mensagem
         
-        if dia_mes == None: # checa se o input é no dia da semana
+        if dia_mes == None: # checa se o input é dia da semana
             for i in date:
                 if i == diaSemana or i == 0: # checa o dia da semana
                     if tempo == schedule: # checa o horário atual
@@ -54,7 +54,7 @@ def manda_mensagem(mensagem): # função para mandar a mensagem
 
 
 ## Main:
-def main():
+def main(): # função que roda no clock
     ## Tempo:
     utc = datetime.datetime.now(datetime.timezone.utc) # setando o tempo para UTC
     BRSP = timezone('America/Sao_Paulo') # escolhendo o fuso horário
