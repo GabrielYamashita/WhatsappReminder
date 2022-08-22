@@ -3,65 +3,71 @@
       {
          "dia_mes": null, 
          "dias_num": [0], 
-         "horario": "07:30", 
-         "message": "Bom dia, Yama!",
-         "id": 1
+         "horario": "06:00", 
+         "message": "Bom dia, Yama!"
       },
 
       {
          "dia_mes": null, 
          "dias_num": [0], 
          "horario": "17:00", 
-         "message": "Fechar a Janela!",
-         "id": 2
+         "message": "Fechar a Janela!"
       },
 
       {
          "dia_mes": null, 
          "dias_num": [0], 
          "horario": "22:00", 
-         "message": "Manda Mensagem!",
-         "id": 3
+         "message": "Manda Mensagem!"
       },
 
       {
          "dia_mes": null,
          "dias_num": [0],
          "horario": "22:01",
-         "message": "join bowl-instant",
-         "id": 4
+         "message": "join bowl-instant"
       },
 
       {
          "dia_mes": null,
          "dias_num": [0],
          "horario": "23:30",
-         "message": "Boa noite, hora de dormir!",
-         "id": 5
+         "message": "Boa Noite, hora de dormir!"
       },
 
       {
          "dia_mes": [12, 15], 
          "dias_num": [0],
          "horario": "15:00",
-         "message": "Imprimir Boleto!",
-         "id": 6
+         "message": "Imprimir Boleto!"
       },
       
       {
          "dia_mes": [12, 15],
          "dias_num": [0], 
          "horario": "20:00",
-         "message": "Imprimir Boleto!",
-         "id": 7
+         "message": "Imprimir Boleto!"
       },
 
       {
          "dia_mes": null,
-         "dias_num": [0],
+         "dias_num": [2, 4, 5],
          "horario": "15:30",
-         "message": "Acabou a Aula",
-         "id": 8
+         "message": "Acabou a Aula"
+      },
+
+      {
+         "dia_mes": null,
+         "dias_num": [1, 3],
+         "horario": "17:45",
+         "message": "Acabou a Aula"
+      },
+
+      {
+         "dia_mes": null,
+         "dias_num": [2, 4],
+         "horario": "18:50",
+         "message": "Treino de Natação!"
       }
    ]     
 }
